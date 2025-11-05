@@ -7,7 +7,7 @@ const base = process.env.BASE_PATH || '/'
 const isPreview = process.env.IS_PREVIEW  ? true : false;
 // https://vite.dev/config/
 export default defineConfig({
-  base, // ← 加上這行
+  base: '/course/',   // ← 關鍵：GitHub Pages 專案頁的子路徑
   define: {
    __BASE_PATH__: JSON.stringify(base),
    __IS_PREVIEW__: JSON.stringify(isPreview)
